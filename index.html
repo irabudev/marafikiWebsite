@@ -1,21 +1,650 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marafiki.or.tz - Coming Soon</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-    </style>
-</head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <div class="text-center p-6 bg-white shadow-lg rounded-lg max-w-md">
-        <h1 class="text-3xl font-bold text-gray-800 mb-4">Hello World!</h1>
-        <p class="text-lg text-gray-600">Welcome to Marafiki.or.tz</p>
-        <p class="text-sm text-gray-500 mt-2">Our website is coming soon. Stay tuned!</p>
-    </div>
-</body>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Marafiki Tanzania - Building Thriving Communities Together</title>
+        <meta name="description" content="Marafiki Tanzania is an NGO empowering communities through healthcare, education, and sustainable development programs since 2023.">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+            
+            .text-orange-primary {
+                color: #FF7F50;
+            }
+
+            .text-marafiki-primary {
+                color: #0f0c0b;
+            }
+            
+            .bg-orange-primary {
+                background-color: #FF7F50;
+            }
+            
+            .shadow-custom {
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            
+            .transition-all {
+                transition: all 0.3s ease;
+            }
+            
+            .program-card:hover {
+                transform: translateY(-5px);
+            }
+            
+            .hero-overlay {
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+            
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+            
+            .animate-fadeIn {
+                animation: fadeIn 1s ease-in-out;
+            }
+        </style>
+    </head>
+    <body class="font-sans bg-gray-50 text-gray-800">
+        <!-- Navigation -->
+        <nav class="bg-white shadow-md fixed w-full z-50">
+            <div class="container mx-auto px-4 py-3">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center">
+                        <img src="./photos/marafiki_logo.png" alt="Marafiki Tanzania Logo" class="h-10 mr-3">
+                        <a href="#" class="font-bold text-2xl text-marafiki-primary">Marafiki</a>
+                        <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded ml-2">NGO No: NGO/R/5979</span>
+                    </div>
+                    
+                    <!-- Mobile menu button -->
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="text-gray-600 hover:text-orange-primary focus:outline-none">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Desktop navigation -->
+                    <div class="hidden md:flex space-x-6 items-center">
+                        <a href="#about" class="hover:text-orange-primary">About</a>
+                        <a href="#programs" class="hover:text-orange-primary">Programs</a>
+                        <a href="#impact" class="hover:text-orange-primary">Impact</a>
+                        <a href="#stories" class="hover:text-orange-primary">Stories</a>
+                        <a href="#contact" class="hover:text-orange-primary">Contact</a>
+                        <a href="#donate" class="bg-orange-primary hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-all">Donate</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile navigation menu -->
+                <div id="mobile-menu" class="md:hidden hidden mt-3 pb-3">
+                    <a href="#about" class="block py-2 hover:text-orange-primary">About</a>
+                    <a href="#programs" class="block py-2 hover:text-orange-primary">Programs</a>
+                    <a href="#impact" class="block py-2 hover:text-orange-primary">Impact</a>
+                    <a href="#stories" class="block py-2 hover:text-orange-primary">Stories</a>
+                    <a href="#contact" class="block py-2 hover:text-orange-primary">Contact</a>
+                    <a href="#donate" class="block py-2 mt-2 bg-orange-primary hover:bg-orange-600 text-white px-4 rounded-lg transition-all text-center">Donate</a>
+                </div>
+            </div>
+        </nav>
+    
+        <!-- Hero Section -->
+        <section class="relative pt-16 lg:pt-0">
+            <div class="w-full h-screen lg:h-[85vh] bg-gray-800 relative overflow-hidden">
+                <!-- Hero image - should be replaced with actual image -->
+                <img src="./photos/hero-outreach.jpg" alt="Marafiki Tanzania community outreach" class="w-full h-full object-cover">
+                
+                <!-- Overlay -->
+                <div class="absolute inset-0 hero-overlay flex flex-col justify-center items-center text-center px-4">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 animate-fadeIn">
+                        Building Thriving Communities in Tanzania – Together
+                    </h1>
+                    <p class="text-xl md:text-2xl text-white mb-8 max-w-3xl animate-fadeIn">
+                        Since 2023, we've empowered 10,000+ Tanzanians with free healthcare, education, and tools for sustainable change.
+                    </p>
+                    <div class="text-white text-lg mb-8 animate-fadeIn">
+                        Proven Impact ∙ Local Solutions ∙ Lasting Change
+                    </div>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 animate-fadeIn">
+                        <a href="#donate" class="bg-orange-primary hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-lg transition-all">
+                            Donate Now
+                        </a>
+                        <a href="#programs" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold px-8 py-3 rounded-lg transition-all">
+                            Our Programs
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Trust Indicators -->
+        <section class="py-12 bg-white" id="about">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-10">Why Communities Trust Marafiki</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                    <div class="bg-orange-50 p-6 rounded-lg shadow-custom text-center">
+                        <div class="text-green-600 text-2xl mb-3">✓</div>
+                        <p class="font-medium">Registered under Tanzania NGOs Act (2024)</p>
+                    </div>
+                    
+                    <div class="bg-orange-50 p-6 rounded-lg shadow-custom text-center">
+                        <div class="text-green-600 text-2xl mb-3">✓</div>
+                        <p class="font-medium">7 Transparent Program Areas</p>
+                    </div>
+                    
+                    <div class="bg-orange-50 p-6 rounded-lg shadow-custom text-center">
+                        <div class="text-green-600 text-2xl mb-3">✓</div>
+                        <p class="font-medium">500+ Volunteers & Local Experts</p>
+                    </div>
+                    
+                    <div class="bg-orange-50 p-6 rounded-lg shadow-custom text-center">
+                        <div class="text-green-600 text-2xl mb-3">✓</div>
+                        <p class="font-medium">Partnered with 6 Reputed Organizations</p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4 text-orange-primary">👁️</div>
+                        <div class="text-3xl font-bold mb-2">2,000+</div>
+                        <p class="text-gray-600">Free Eye Tests Conducted</p>
+                    </div>
+                    
+                    <div class="flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4 text-orange-primary">🌱</div>
+                        <div class="text-3xl font-bold mb-2">50+</div>
+                        <p class="text-gray-600">Climate Action Workshops</p>
+                    </div>
+                    
+                    <div class="flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4 text-orange-primary">🩸</div>
+                        <div class="text-3xl font-bold mb-2">1,200</div>
+                        <p class="text-gray-600">Girls Supported with Menstrual Care</p>
+                    </div>
+                    
+                    <div class="flex flex-col items-center text-center">
+                        <div class="text-5xl mb-4 text-orange-primary">📚</div>
+                        <div class="text-3xl font-bold mb-2">15</div>
+                        <p class="text-gray-600">Schools Reached with Learning Tools</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Core Programs -->
+        <section class="py-16 bg-gray-50" id="programs">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-4">How We Create Change</h2>
+                <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+                    Through targeted programs focused on health, education, and sustainability, we're building 
+                    stronger communities one person at a time.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Program 1 -->
+                    <div class="bg-white rounded-lg shadow-custom overflow-hidden transition-all program-card">
+                        <img src="./gallery/eye-camp-1.jpg" alt="Vision for All program - eye testing in Tanzania" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="text-3xl mr-3">👓</span>
+                                <h3 class="font-bold text-xl">Vision for All</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Free eye care services for marginalized communities, including testing, glasses, 
+                                and referrals for advanced treatment.
+                            </p>
+                            <div class="mt-4">
+                                <span class="text-sm text-gray-500">Impact: 2,000+ eye tests conducted</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Program 2 -->
+                    <div class="bg-white rounded-lg shadow-custom overflow-hidden transition-all program-card">
+                        <img src="./gallery/menstrual-health-2.jpg" alt="Safe & Strong Girls program - menstrual health education" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="text-3xl mr-3">🩹</span>
+                                <h3 class="font-bold text-xl">Safe & Strong Girls</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Comprehensive menstrual health education and hygiene kits to ensure girls can stay in school 
+                                and maintain dignity.
+                            </p>
+                            <div class="mt-4">
+                                <span class="text-sm text-gray-500">Impact: 1,200 girls supported</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Program 3 -->
+                    <div class="bg-white rounded-lg shadow-custom overflow-hidden transition-all program-card">
+                        <img src="./gallery/climate-action-3.jpg" alt="Green Futures program - climate resilience training" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="text-3xl mr-3">🌳</span>
+                                <h3 class="font-bold text-xl">Green Futures</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Climate resilience training, sustainable farming techniques, and tree planting initiatives 
+                                to protect Tanzania's environment.
+                            </p>
+                            <div class="mt-4">
+                                <span class="text-sm text-gray-500">Impact: 50+ climate workshops delivered</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Program 4 -->
+                    <div class="bg-white rounded-lg shadow-custom overflow-hidden transition-all program-card">
+                        <img src="./gallery/education-outreach-4.jpg" alt="Bright Minds program - educational support" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="text-3xl mr-3">📚</span>
+                                <h3 class="font-bold text-xl">Bright Minds</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Educational resources, teacher training, and learning materials to enhance quality education 
+                                in underserved communities.
+                            </p>
+                            <div class="mt-4">
+                                <span class="text-sm text-gray-500">Impact: 15 schools reached</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Program 5 -->
+                    <div class="bg-white rounded-lg shadow-custom overflow-hidden transition-all program-card">
+                        <img src="./gallery/health-camp-5.jpg" alt="Community Health program - medical services" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="text-3xl mr-3">🏥</span>
+                                <h3 class="font-bold text-xl">Community Health</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Free health screenings, vaccinations, and basic medical services for communities 
+                                with limited healthcare access.
+                            </p>
+                            <div class="mt-4">
+                                <span class="text-sm text-gray-500">Impact: 3,500+ patients served</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Program 6 -->
+                    <div class="bg-white rounded-lg shadow-custom overflow-hidden transition-all program-card">
+                        <img src="./gallery/skills-training-6.jpg" alt="Skills & Livelihoods program - vocational training" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="text-3xl mr-3">🔧</span>
+                                <h3 class="font-bold text-xl">Skills & Livelihoods</h3>
+                            </div>
+                            <p class="text-gray-600 mb-4">
+                                Vocational training, micro-entrepreneurship support, and market access to help 
+                                community members achieve economic independence.
+                            </p>
+                            <div class="mt-4">
+                                <span class="text-sm text-gray-500">Impact: 300+ entrepreneurs trained</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Storytelling Section -->
+        <section class="py-16 bg-white" id="stories">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-4">From Our Community</h2>
+                <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+                    Real stories of change and transformation from the communities we serve.
+                </p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-10">
+                    <img src="./gallery/outreach_photo_1.jpg" alt="Community member during eye testing program" class="w-full h-48 object-cover rounded-lg shadow-custom">
+                    <img src="./gallery/outreach_photo_2.jpg" alt="Girls receiving menstrual health education" class="w-full h-48 object-cover rounded-lg shadow-custom">
+                    <img src="./gallery/outreach_photo_3.jpg" alt="Tree planting activity with community volunteers" class="w-full h-48 object-cover rounded-lg shadow-custom">
+                    <img src="./gallery/outreach_photo_4.jpg" alt="Educational materials distribution at local school" class="w-full h-48 object-cover rounded-lg shadow-custom">
+                    <img src="./gallery/outreach_photo_5.jpg" alt="Community health screening in rural village" class="w-full h-48 object-cover rounded-lg shadow-custom">
+                    <img src="./gallery/outreach_photo_6.jpg" alt="Skills training workshop with youth participants" class="w-full h-48 object-cover rounded-lg shadow-custom">
+                    <img src="./gallery/outreach_photo_7.jpg" alt="Volunteer doctors providing eye care services" class="w-full h-48 object-cover rounded-lg shadow-custom">
+                    <img src="./gallery/outreach_photo_8.jpg" alt="Community celebration after program completion" class="w-full h-48 object-cover rounded-lg shadow-custom">
+                </div>
+                
+                <div class="bg-orange-50 p-8 rounded-lg shadow-custom max-w-3xl mx-auto">
+                    <div class="flex items-start">
+                        <div class="text-5xl text-orange-primary">"</div>
+                        <div class="ml-4">
+                            <p class="text-xl italic mb-4">
+                                Marafiki gave my daughter glasses – now she can read again! Before, she was struggling in school 
+                                and getting headaches. Now she smiles when she reads her books. This organization has changed our lives.
+                            </p>
+                            <p class="font-bold">– Mama Asha, Arusha</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Partners & Recognition -->
+        <section class="py-16 bg-gray-50" id="impact">
+            <!-- <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-4">Working Hand-in-Hand for Tanzania</h2>
+                <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+                    Our partnerships with trusted organizations help us expand our reach and deepen our impact.
+                </p>
+                
+                <div class="flex flex-wrap justify-center items-center gap-8 mb-10">
+                    <img src="./partners/partner1.png" alt="Partner Organization Logo" class="h-16 grayscale hover:grayscale-0 transition-all">
+                    <img src="./partners/partner2.png" alt="Partner Organization Logo" class="h-16 grayscale hover:grayscale-0 transition-all">
+                    <img src="./partners/partner3.png" alt="Partner Organization Logo" class="h-16 grayscale hover:grayscale-0 transition-all">
+                    <img src="./partners/partner4.png" alt="Partner Organization Logo" class="h-16 grayscale hover:grayscale-0 transition-all">
+                    <img src="./partners/partner5.png" alt="Partner Organization Logo" class="h-16 grayscale hover:grayscale-0 transition-all">
+                    <img src="./partners/partner6.png" alt="Partner Organization Logo" class="h-16 grayscale hover:grayscale-0 transition-all">
+                </div>
+                
+                <p class="text-center text-gray-600">
+                    Officially registered and audited. <a href="#" class="text-orange-primary hover:underline">View our annual reports</a>.
+                </p>
+            </div> -->
+        </section>
+    
+        <!-- Call-to-Action -->
+        <section class="py-16 bg-orange-primary text-white" id="donate">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-4">You Can Be Part of the Change</h2>
+                <p class="text-center max-w-3xl mx-auto mb-12">
+                    Every contribution fuels our work and creates lasting impact in Tanzanian communities.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
+                    <div class="bg-white bg-opacity-20 p-6 rounded-lg text-center">
+                        <h3 class="text-2xl font-bold mb-2">50,000 TZS</h3>
+                        <p>Eye glasses for 2 people</p>
+                    </div>
+                    
+                    <div class="bg-white bg-opacity-20 p-6 rounded-lg text-center">
+                        <h3 class="text-2xl font-bold mb-2">100,000 TZS</h3>
+                        <p>Menstrual kits for 10 girls</p>
+                    </div>
+                    
+                    <div class="bg-white bg-opacity-20 p-6 rounded-lg text-center">
+                        <h3 class="text-2xl font-bold mb-2">500,000 TZS</h3>
+                        <p>Climate workshop for a village</p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row gap-6 justify-center max-w-md mx-auto">
+                    <a href="#" class="bg-white text-orange-primary hover:bg-gray-100 font-semibold px-8 py-3 rounded-lg text-center transition-all">
+                        Donate Now
+                    </a>
+                    <a href="#" class="bg-transparent border-2 border-white hover:bg-white hover:text-orange-primary font-semibold px-8 py-3 rounded-lg text-center transition-all">
+                        Volunteer
+                    </a>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Instagram Feed -->
+        <section class="py-16 bg-white" id="instagram-feed">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-4">See the Change Unfold</h2>
+                <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+                    Follow our journey on Instagram as we work with communities across Tanzania.
+                </p>
+                
+                <!-- Instagram Feed -->
+                <div class="max-w-5xl mx-auto mb-6">
+                    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                    <div class="elfsight-app-ef7dd520-228a-4119-a398-f51f77067772" data-elfsight-app-lazy></div>
+                    
+                    <!-- Fallback message if script doesn't load -->
+                    <noscript>
+                        <p class="text-center text-gray-600">
+                            Visit <a href="https://www.instagram.com/marafikitz_organisation/" class="text-orange-primary hover:underline">@marafikitz_organisation</a> on Instagram to see our latest updates.
+                        </p>
+                    </noscript>
+                </div>
+                
+                <p class="text-center">
+                    <a href="https://www.instagram.com/marafikitz_organisation/" target="_blank" class="text-orange-primary hover:underline flex items-center justify-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                        Follow @marafikitz_organisation for real-time updates from the field
+                    </a>
+                </p>
+            </div>
+        </section>
+    
+        <!-- Contact Section -->
+        <section class="py-16 bg-gray-50" id="contact">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+                        <p class="text-gray-600 mb-8">
+                            Have questions about our work or how you can contribute? We'd love to hear from you!
+                        </p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="text-orange-primary mt-1 mr-3">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold">Address</h3>
+                                    <p class="text-gray-600">Arusha, Tanzania</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-orange-primary mt-1 mr-3">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold">Email</h3>
+                                    <p class="text-gray-600">info@marafiki.org</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-orange-primary mt-1 mr-3">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold">Phone</h3>
+                                    <p class="text-gray-600">+255 123 456 789</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 flex space-x-4">
+                            <a href="#" class="text-gray-600 hover:text-orange-primary">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/marafikitz_organisation/" target="_blank" class="text-gray-600 hover:text-orange-primary">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-orange-primary">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.054 10.054 0 01-3.127 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <form class="bg-white p-8 rounded-lg shadow-custom">
+                            <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
+                            
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-primary">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 mb-2">Your Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-primary">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                                <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-primary">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 mb-2">Your Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-primary"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-orange-primary hover:bg-orange-600 text-white font-semibold py-3 px-4 rounded-lg transition-all">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white pt-16 pb-8">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                    <div>
+                        <div class="flex items-center mb-4">
+                            <img src="./photos/marafiki_logo.png" alt="Marafiki Tanzania Logo" class="h-12 mr-3">
+                            <h3 class="text-xl font-bold">About Marafiki</h3>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            We're building thriving communities across Tanzania through healthcare, education, and sustainable development programs.
+                        </p>
+
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-300 hover:text-white">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/marafikitz_organisation/" target="_blank" class="text-gray-300 hover:text-white">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-300 hover:text-white">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.054 10.054 0 01-3.127 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Our Programs</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#programs" class="text-gray-300 hover:text-white">Vision for All</a></li>
+                            <li><a href="#programs" class="text-gray-300 hover:text-white">Safe & Strong Girls</a></li>
+                            <li><a href="#programs" class="text-gray-300 hover:text-white">Green Futures</a></li>
+                            <li><a href="#programs" class="text-gray-300 hover:text-white">Bright Minds</a></li>
+                            <li><a href="#programs" class="text-gray-300 hover:text-white">Community Health</a></li>
+                            <li><a href="#programs" class="text-gray-300 hover:text-white">Skills & Livelihoods</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#about" class="text-gray-300 hover:text-white">About Us</a></li>
+                            <li><a href="#impact" class="text-gray-300 hover:text-white">Our Impact</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white">Annual Reports</a></li>
+                            <li><a href="#donate" class="text-gray-300 hover:text-white">Donate</a></li>
+                            <li><a href="#" class="text-gray-300 hover:text-white">Volunteer</a></li>
+                            <li><a href="#contact" class="text-gray-300 hover:text-white">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+                        <p class="text-gray-300 mb-4">
+                            Get impact stories straight to your inbox.
+                        </p>
+                        <form>
+                            <div class="flex">
+                                <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-lg focus:outline-none">
+                                <button type="submit" class="bg-orange-primary hover:bg-orange-600 text-white px-4 py-2 rounded-r-lg transition-all">
+                                    Subscribe
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <hr class="border-gray-700 mb-8">
+                
+                <div class="text-center text-gray-300 text-sm">
+                    <div class="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-4 mb-4">
+                        <span>🏢 Registered Office: Arusha, Tanzania</span>
+                        <span>📜 NGO No: NGO/R/5979 ∙ Compliance: NGOs Act 2024</span>
+                        <span>🤝 Audited by: FORTIS ATTORNEYS</span>
+                    </div>
+                    <p>&copy; 2024 Marafiki Tanzania. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    
+        <!-- Scripts -->
+        <script>
+            // Mobile menu toggle
+            document.getElementById('mobile-menu-button').addEventListener('click', function() {
+                const menu = document.getElementById('mobile-menu');
+                menu.classList.toggle('hidden');
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        // Close mobile menu if open
+                        document.getElementById('mobile-menu').classList.add('hidden');
+                        
+                        // Scroll to the target element
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80, // Adjust for fixed header
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Instagram Feed Integration with Curator.io
+            (function(){
+                var i, e, d = document, s = "script";i = d.createElement("script");i.async = 1;
+                i.src = "https://cdn.curator.io/published/144064d5-bec8-4cdf-91e7-7ef19e0ae381.js";
+                e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
+            })();
+        </script>
+    </body>
 </html>
